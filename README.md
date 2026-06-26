@@ -17,8 +17,10 @@ python main.py
 
 ## Railway
 
-1. **New Project** → Deploy from GitHub → репозиторий `batumiarenda`.
-2. **Settings → Root Directory:** `telegram_hotel_bot`
+1. **New Project** → Deploy from GitHub/GitLab → репозиторий `batumiarenda`.
+2. Сборка идёт через **Dockerfile** в корне (код в `telegram_hotel_bot/`).
 3. **Variables:** `BOT_TOKEN`, `ADMIN_IDS` (и при необходимости остальное).
 4. **Volume:** mount path `/data`, переменная `DB_PATH=/data/hotel_bot.db` (чтобы отзывы не пропадали при redeploy).
 5. Остановите локальный `python main.py`, если бот уже запущен с тем же токеном.
+
+Альтернатива без Docker: **Settings → Root Directory** = `telegram_hotel_bot`, тогда Railway увидит `requirements.txt` и `railway.toml` внутри папки.

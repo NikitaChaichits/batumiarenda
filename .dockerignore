@@ -1,0 +1,11 @@
+**/.env
+**/.env.*
+!**/.env.example
+**/venv
+**/__pycache__
+**/*.pyc
+**/.git
+**/hotel_bot.db
+**/*.db-wal
+**/*.db-shm
+photo_*.jpg
